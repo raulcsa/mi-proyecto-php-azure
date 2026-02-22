@@ -1,4 +1,4 @@
-# Pipeline CI/CD con Jenkins y Azure para Proyecto en PHP (Sirve para cualquier lenguaje)
+# Pipeline CI/CD con Jenkins y Azure para Proyecto en PHP 
 
 Este proyecto demuestra cómo montar una pipeline de Integración Continua y Despliegue Continuo (CI/CD) automatizada. Cada vez que se realiza un cambio en este repositorio, Jenkins descarga el código, lo prepara y lo despliega automáticamente en un **Azure App Service**.
 
@@ -55,7 +55,7 @@ Esta es la parte donde le digo a Jenkins de dónde tiene que sacar el código pa
 
 <img width="852" height="274" alt="image" src="https://github.com/user-attachments/assets/b6947be6-8545-4d09-b1e8-163951b7be98" />
 
-Esta área sirve para definir qué eventos automáticos deben hacer que tu pipeline comience a ejecutarse por sí sola, sin que nadie tenga que pulsar el botón de "Construir ahora".
+Esta área sirve para definir qué eventos automáticos deben hacer que mi pipeline comience a ejecutarse por sí sola, sin que nadie tenga que pulsar el botón de "Construir ahora".
 
 ---
 ## 5. Configurar las credenciales para conectar con Azure
