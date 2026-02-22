@@ -8,5 +8,7 @@
     <h1>¡Hola Mundo! Despliegue automatizado con Jenkins y Azure </h1>
     <p>La fecha y hora actual en el servidor es: <?php echo date('Y-m-d H:i:s'); ?></p>
     <p>Versión de PHP: <?php echo phpversion(); ?></p>
+     <p>Prueba de despliegue al pushear</p>
+    
 </body>
 </html>
