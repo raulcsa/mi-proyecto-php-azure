@@ -77,7 +77,7 @@ En estas imágenes estoy en la pantalla "Add Azure Service Principal" dentro de 
 
 En esta captura muestro cómo he configurado el Webhook en mi repositorio para disparar las ejecuciones de mi pipeline CI/CD en Jenkins.
 
-**Payload URL:** Aquí he configurado el *endpoint* de destino. He introducido la URL pública generada por ngrok (`https://nonhereditably-insightful-journey.ngrok-free.dev/github-webhook/`). 
+* **Payload URL:** Aquí he configurado el *endpoint* de destino. He introducido la URL pública generada por ngrok (`https://nonhereditably-insightful-journey.ngrok-free.dev/github-webhook/`). 
 * **Content type:** Lo he seteado explícitamente a `application/json`. Esto es vital porque el *listener* del plugin en Jenkins espera parsear el cuerpo de la petición HTTP como un objeto JSON estructurado que contiene los metadatos del evento, en lugar de utilizar el formato `x-www-form-urlencoded`.
 * **Events:** He limitado el alcance del *trigger* seleccionando la opción **"Just the push event"**. Con esto optimizo el uso de recursos de mi infraestructura, garantizando que el pipeline solo se ponga en marcha cuando se haga un `git push` con nuevos *commits* al repositorio, ignorando el resto de eventos de la API de GitHub (como creación de *Pull Requests*, etiquetas o comentarios).
 * **Active:** He dejado este *flag* activado para habilitar el *delivery* de los *webhooks* en tiempo real desde este mismo momento.
