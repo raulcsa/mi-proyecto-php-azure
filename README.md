@@ -43,22 +43,14 @@ Para que Jenkins tenga permiso de "hablar" con mi cuenta de Azure, voy a generar
 
 az ad sp create-for-rbac --name "JenkinsCI" --role contributor --scopes /subscriptions/<Mi_ID_DE_SUSCRIPCION>
 <img width="1793" height="150" alt="image" src="https://github.com/user-attachments/assets/05c921e0-a678-48a2-a005-503ecaae5065" />
-
-
-
-
-
-<img width="1912" height="819" alt="image" src="https://github.com/user-attachments/assets/410cdad2-f800-48b2-b9ed-01cf2c3c20d2" />
-
-<img width="546" height="756" alt="image" src="https://github.com/user-attachments/assets/c4a33836-9240-4307-bfba-4f9efc9274c6" />
-<img width="542" height="338" alt="image" src="https://github.com/user-attachments/assets/69695070-d372-40f1-a021-94d5c61994f2" />
 <img width="1919" height="817" alt="image" src="https://github.com/user-attachments/assets/765fc116-db36-4b26-9c60-def6546840ed" />
 <img width="1334" height="688" alt="image" src="https://github.com/user-attachments/assets/48481c99-e06a-4099-b6e2-39ad0dc517f1" />
 <img width="1919" height="604" alt="image" src="https://github.com/user-attachments/assets/066466c7-351e-4e83-ba5f-88edfbc29300" />
 <img width="1919" height="342" alt="image" src="https://github.com/user-attachments/assets/0d9495d1-f515-4c7a-941e-0e6d4395d5ce" />
 <img width="852" height="274" alt="image" src="https://github.com/user-attachments/assets/b6947be6-8545-4d09-b1e8-163951b7be98" />
 <img width="980" height="301" alt="image" src="https://github.com/user-attachments/assets/4f52d178-423e-4d1b-b03a-607b1f457c08" />
-<img width="1150" height="836" alt="image" src="https://github.com/user-attachments/assets/2148dbae-9a81-4a2b-8df7-a9584f934b3a" />
+<img width="807" height="797" alt="image" src="https://github.com/user-attachments/assets/6a929f2c-626f-4d99-b8f5-3c1834ed927c" />
+
 
 
 
