@@ -23,18 +23,27 @@ pipeline {
             }
         }
 
-        stage('Desplegar en Azure') {
+        stage('Desplegar en Azure (vía CLI)') {
             steps {
-                echo 'Desplegando en Azure App Service...'
-                azureWebAppPublish(
-                    azureCredentialsId: "${AZURE_CREDENTIALS_ID}",
-                    resourceGroup: "${RESOURCE_GROUP}",
-                    appName: "${APP_NAME}",
-                    filePath: "app.zip"
-                )
+                echo 'Iniciando sesión en Azure y desplegando...'
+                withCredentials([azureServicePrincipal(credentialsId: "${AZURE_CREDENTIALS_ID}",
+                                                       subscriptionIdVariable: 'AZ_SUBSCRIPTION_ID',
+                                                       clientIdVariable: 'AZ_CLIENT_ID',
+                                                       clientSecretVariable: 'AZ_CLIENT_SECRET',
+                                                       tenantIdVariable: 'AZ_TENANT_ID')]) {
+                    sh '''
+                    # 1. Iniciar sesión en Azure con el Service Principal
+                    az login --service-principal -u $AZ_CLIENT_ID -p $AZ_CLIENT_SECRET --tenant $AZ_TENANT_ID
+                    
+                    # 2. Desplegar el archivo .zip en el App Service
+                    az webapp deployment source config-zip -g ${RESOURCE_GROUP} -n ${APP_NAME} --src app.zip
+                    
+                    # 3. Cerrar sesión por seguridad
+                    az logout
+                    '''
+                }
             }
         }
-    }
 
     post {
         success {
