@@ -50,6 +50,8 @@ az ad sp create-for-rbac --name "JenkinsCI" --role contributor --scopes /subscri
 <img width="852" height="274" alt="image" src="https://github.com/user-attachments/assets/b6947be6-8545-4d09-b1e8-163951b7be98" />
 <img width="980" height="301" alt="image" src="https://github.com/user-attachments/assets/4f52d178-423e-4d1b-b03a-607b1f457c08" />
 <img width="807" height="797" alt="image" src="https://github.com/user-attachments/assets/6a929f2c-626f-4d99-b8f5-3c1834ed927c" />
+<img width="1287" height="331" alt="image" src="https://github.com/user-attachments/assets/0c211f8f-7f4c-4d91-a61f-d23038603ee1" />
+
 
 
 
