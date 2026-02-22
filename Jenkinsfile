@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-
         AZURE_CREDENTIALS_ID = 'azure-credentials'
         RESOURCE_GROUP = 'rg-jenkins-webapp' 
         APP_NAME = 'mi-app-php-12345'      
@@ -32,13 +31,8 @@ pipeline {
                                                        clientSecretVariable: 'AZ_CLIENT_SECRET',
                                                        tenantIdVariable: 'AZ_TENANT_ID')]) {
                     sh '''
-                    # 1. Iniciar sesión en Azure con el Service Principal
                     az login --service-principal -u $AZ_CLIENT_ID -p $AZ_CLIENT_SECRET --tenant $AZ_TENANT_ID
-                    
-                    # 2. Desplegar el archivo .zip en el App Service
                     az webapp deployment source config-zip -g ${RESOURCE_GROUP} -n ${APP_NAME} --src app.zip
-                    
-                    # 3. Cerrar sesión por seguridad
                     az logout
                     '''
                 }
