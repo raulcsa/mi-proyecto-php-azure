@@ -84,7 +84,10 @@ En esta captura muestro cómo he configurado el Webhook en mi repositorio para d
 
 ---
 ## 7. Probar que todo funciona y se sube el codigo al app service
+<img width="1918" height="841" alt="image" src="https://github.com/user-attachments/assets/c595c6df-11a0-45c3-8c7f-6904449f5bc2" />
+
 <img width="1287" height="331" alt="image" src="https://github.com/user-attachments/assets/0c211f8f-7f4c-4d91-a61f-d23038603ee1" />
+
 
 
 
