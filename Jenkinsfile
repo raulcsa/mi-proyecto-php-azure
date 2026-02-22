@@ -4,7 +4,7 @@ pipeline {
     environment {
 
         AZURE_CREDENTIALS_ID = 'azure-credentials'
-        RESOURCE_GROUP = 'rg-jenkins-demo' 
+        RESOURCE_GROUP = 'rg-jenkins-webapp' 
         APP_NAME = 'mi-app-php-12345'      
     }
 
