@@ -64,47 +64,6 @@ mi-proyecto-php-azure-jenkins/
 └── README.md        # Documentación del proyecto
 ```
 
-### `Jenkinsfile`
-
-El pipeline está dividido en tres etapas:
-
-```groovy
-pipeline {
-    agent any
-
-    environment {
-        AZURE_CREDENTIALS_ID = 'azure-credentials'
-        RESOURCE_GROUP       = 'rg-jenkins-webapp'
-        APP_NAME             = 'mi-app-php-12345'
-    }
-
-    stages {
-        stage('Clonar Repositorio') {
-            steps {
-                checkout scm
-            }
-        }
-        stage('Preparar y Empaquetar') {
-            steps {
-                sh 'zip -r app.zip . -x "*.git*" -x "Jenkinsfile"'
-            }
-        }
-        stage('Desplegar en Azure (vía CLI)') {
-            steps {
-                withCredentials([azureServicePrincipal(credentialsId: "${AZURE_CREDENTIALS_ID}", ...)]) {
-                    sh '''
-                        az login --service-principal ...
-                        az webapp deployment source config-zip ...
-                        az logout
-                    '''
-                }
-            }
-        }
-    }
-}
-```
-
----
 
 ## Prerrequisitos
 
